@@ -19,4 +19,16 @@ pipeline {
             }
         }
     }
+
+    post{
+        always{
+            archiveArtifacts '*.log'
+        }
+        success{
+            echo 'Playbook executed successfully'
+        }
+        failure{
+            echo 'Playbook failed to execute!'
+        }
+    }
 }
