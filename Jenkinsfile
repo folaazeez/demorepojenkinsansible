@@ -14,7 +14,7 @@ pipeline {
                 ansiblePlaybook{
                     credentialsId: 'ssh_user',
                     inventory: './inventory',
-                    playbook: 
+                    playbook: 'ftp.yml'
                 }
             }
         }
