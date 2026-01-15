@@ -1,1 +1,12 @@
-
+---
+  - hosts: all
+  tasks:
+  - name: install ftp server package
+    apt:
+      name: vsftpd
+      state: installed
+  - name: start ftp service
+    service:
+      name: vsftpd
+      state: started
+      enabled: yes
