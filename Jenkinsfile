@@ -12,7 +12,7 @@ pipeline {
         stage{
             steps{
                 ansiblePlaybook{
-                    credentialsId: 'ssh_user',
+                    credentialsId: 'ansible-ssh',
                     inventory: './inventory',
                     playbook: 'ftp.yml'
                 }
