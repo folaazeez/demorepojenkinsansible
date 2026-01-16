@@ -4,7 +4,7 @@
     - name: install ftp server package
       apt:
         name: vsftpd
-        state: installed
+        state: present
     - name: start ftp service
       service:
         name: vsftpd
