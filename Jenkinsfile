@@ -4,12 +4,12 @@ pipeline {
     }
     
     stages{
-        stage{
+        stage ('Checkout Code'){
             steps{
                 checkout scm
                 }
             }
-        stage{
+        stage ('Run Ansible Playbook'){
             steps{
                 ansiblePlaybook(credentialsId: 'ansible-ssh', nventory: './inventory',playbook: 'ftp.yml')
             }
