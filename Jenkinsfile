@@ -11,7 +11,7 @@ pipeline {
             }
         stage ('Run Ansible Playbook'){
             steps{
-                ansiblePlaybook(credentialsId: 'ansible-ssh', nventory: './inventory',playbook: 'ftp.yml')
+                ansiblePlaybook(credentialsId: 'ansible-ssh', inventory: './inventory',playbook: 'ftp.yml')
             }
         }
     }
