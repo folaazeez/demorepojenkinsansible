@@ -39,5 +39,8 @@ pipeline {
         failure{
             echo 'Playbook failed to execute!'
         }
+        cleanup { cleanWs() }
+
     }
+
 }
